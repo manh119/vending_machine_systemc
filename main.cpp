@@ -46,19 +46,6 @@ int sc_main(int ac, char *av[])
     sup.releaseProduct(releaseProduct);
 
 
-    // Waves:
-    tf = sc_create_vcd_trace_file("waves");
-    tf->set_time_unit(1, SC_NS);
-
-    sc_trace(tf, clk, "clk");
-    sc_trace(tf, takeDrink, "takeDrink");
-    sc_trace(tf, availableDrink, "availableDrink");
-    sc_trace(tf, drinkCode, "drinkCode");
-    sc_trace(tf, coinValue, "coinValue");
-    sc_trace(tf, ctrol.requireReleaseProduct, "requireReleaseProduct");
-    sc_trace(tf, sup.releaseProduct, "releaseProduct");
-    sc_trace(tf, ctrol.returnCoin, "returnCoin");
-    sc_trace(tf, ctrol.resetSignal, "resetSignal");
 
 
     sc_start();
